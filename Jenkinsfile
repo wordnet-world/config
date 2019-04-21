@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Apply config to prod') {
       steps {
-        sh 'ssh wordnet ~/config/configure.sh'
+        sh 'ssh wordnet "~/config/configure.sh"'
       }
     }
   }
