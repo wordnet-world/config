@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''scp -r . wordnet:~/config/
 '''
+        sh 'ssh wordnet "chmod +x ~/config/configure.sh"'
       }
     }
     stage('Apply config to prod') {
