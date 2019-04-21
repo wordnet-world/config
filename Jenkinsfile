@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Copy config to prod') {
       steps {
-        sh '''scp -r . wordnet:~/config/
-'''
+        sh 'scp -r . wordnet:~/config/'
         sh 'ssh wordnet "chmod +x ~/config/configure.sh"'
       }
     }
