@@ -1,3 +1,3 @@
 echo "Applying manifests..."
-kubectl apply -k manifests/
+kubectl apply config/manifests/
 echo "Manifests applied."
