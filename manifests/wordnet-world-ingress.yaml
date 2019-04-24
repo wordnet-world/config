@@ -19,6 +19,6 @@ spec:
       - path: /api
         backend:
           serviceName: wordnet-world-conductor
-          servicePort:80
+          servicePort: 80
   tls:
   - secretName: wordnet-world-certs
