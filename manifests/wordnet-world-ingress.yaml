@@ -13,10 +13,10 @@ spec:
   - host: wordnet.world
     http:
       paths:
-#       - path: /api
-#         backend:
-#           serviceName: wordnet-world-conductor
-#           servicePort: 80
+      - path: /api
+        backend:
+          serviceName: wordnet-world-conductor
+          servicePort: 80
       - path: /
         backend:
           serviceName: wordnet-world-web-app
