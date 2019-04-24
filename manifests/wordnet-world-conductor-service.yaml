@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordnet-world-conductor
+  labels:
+    name: wordnet-world-conductor
+spec:
+  ports:
+    - port: 80
+      targetPort: 8675
+      protocol: TCP
+  selector:
+    app: wordnet-world-conductor
+  type: ClusterIP
