@@ -4,7 +4,6 @@ metadata:
   name: wordnet-world
   namespace: default
   annotations:
-    ingress.kubernetes.io/protocol: https
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
