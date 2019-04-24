@@ -1,17 +1,21 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   name: wordnet-world-conductor
 spec:
   replicas: 1
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: wordnet-world-conductor
     spec:
       containers:
-        - name: wordnet-world-conductor
-          image: >-
-            cjblink1/wordnet-world-conductor:0a5aa229e10f8ea1e87fea8fb39635b563b804e5
-          ports:
-            - containerPort: 8675
+      - image: cjblink1/wordnet-world-conductor:59921d6203122435f1f4d80b329bda58b9a224dd
+        name: wordnet-world-conductor
+        ports:
+        - containerPort: 8675
+        resources: {}
+status: {}
