@@ -5,6 +5,7 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: "Access-Control-Allow-Origin: *"
     traefik.ingress.kubernetes.io/redirect-entry-point: https
     traefik.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -12,13 +13,13 @@ spec:
   - host: wordnet.world
     http:
       paths:
-      - path: /
-        backend:
-          serviceName: wordnet-world-web-app
-          servicePort: 80
       - path: /api
         backend:
           serviceName: wordnet-world-conductor
+          servicePort: 80
+      - path: /
+        backend:
+          serviceName: wordnet-world-web-app
           servicePort: 80
   tls:
   - secretName: wordnet-world-certs
