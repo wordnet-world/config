@@ -14,19 +14,3 @@ spec:
           image: 'cjblink1/wordnet-world-web-app:66a9d802383db140be9c34de1c41eb9e81777c10'
           ports:
             - containerPort: 80
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: wordnet-world-web-app
-  labels:
-    name: wordnet-world-web-app
-spec:
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
-  selector:
-    app: wordnet-world-web-app
-  type: ClusterIP
