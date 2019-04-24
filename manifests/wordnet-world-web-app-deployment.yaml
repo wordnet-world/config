@@ -1,16 +1,21 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   name: wordnet-world-web-app
 spec:
   replicas: 1
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: wordnet-world-web-app
     spec:
       containers:
-        - name: wordnet-world-web-app
-          image: 'cjblink1/wordnet-world-web-app:66a9d802383db140be9c34de1c41eb9e81777c10'
-          ports:
-            - containerPort: 80
+      - image: cjblink1/wordnet-world-web-app:389667a50ebf76a52cfac4889a5b3e7a73d888f9
+        name: wordnet-world-web-app
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
