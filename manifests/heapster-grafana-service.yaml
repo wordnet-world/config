@@ -6,7 +6,7 @@ metadata:
     # If you are NOT using this as an addon, you should comment out this line.
     kubernetes.io/cluster-service: 'true'
     kubernetes.io/name: monitoring-grafana
-  name: monitoring-grafana
+  name: heapster-grafana
   namespace: kube-system
 spec:
   # In a production setup, we recommend accessing Grafana through an external Loadbalancer
