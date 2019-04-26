@@ -26,7 +26,7 @@ spec:
           name: grafana-storage
         env:
         - name: INFLUXDB_HOST
-          value: monitoring-influxdb
+          value: heapster-influxdb
         - name: GF_SERVER_HTTP_PORT
           value: "3000"
           # The following env variables are required to make Grafana accessible via
