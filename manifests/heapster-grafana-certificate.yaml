@@ -1,0 +1,19 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: heapster-grafana-certificate
+  namespace: kube-system
+spec:
+  secretName: heapster-grafana-certs
+  issuerRef:
+    name: letsencrypt-prod-cluster-issuer
+    kind: ClusterIssuer
+  commonName: grafana.wordnet.world
+  dnsNames:
+  - grafana.wordnet.world
+  acme:
+    config:
+    - http01:
+        ingressClass: traefik
+      domains:
+      - grafana.wordnet.world
