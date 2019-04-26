@@ -13,7 +13,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: heapster-grafana-service
+          serviceName: heapster-grafana
           servicePort: 80
   tls:
   - secretName: heapster-grafana-certs
