@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: prometheus
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: traefik
+#     traefik.ingress.kubernetes.io/redirect-entry-point: https
+spec:
+  rules:
+  - host: prometheus.wordnet.world
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: prometheus-operated
+          servicePort: web
+  tls:
+  - secretName: prometheus-certs
