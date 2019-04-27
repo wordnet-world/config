@@ -134,11 +134,11 @@ spec:
       volumes:
       - name: tmp-volume
         emptyDir: {}
-      serviceAccountName: kubernetes-dashboard-head
+      serviceAccountName: admin-user
       # Comment the following tolerations if Dashboard must not be deployed on master
-      tolerations:
-      - key: node-role.kubernetes.io/master
-        effect: NoSchedule
+#       tolerations:
+#       - key: node-role.kubernetes.io/master
+#         effect: NoSchedule
 
 ---
 # ------------------- Dashboard Service ------------------- #
