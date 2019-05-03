@@ -12,5 +12,10 @@ pipeline {
         sh 'ssh wordnet "~/config/configure.sh"'
       }
     }
+    stage('Clean up') {
+      steps {
+        sh 'ssh wordnet "rm -rf ~/config/*"'
+      }
+    }
   }
 }
