@@ -13,7 +13,7 @@ spec:
         app: wordnet-world-conductor
     spec:
       containers:
-      - image: cjblink1/wordnet-world-conductor:59921d6203122435f1f4d80b329bda58b9a224dd
+      - image: cjblink1/wordnet-world-conductor:b9053ae2de0cbbb126528318a30aeaa39edc4602
         name: wordnet-world-conductor
         ports:
         - containerPort: 8675
