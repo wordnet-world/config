@@ -20,7 +20,7 @@ spec:
         resources: {}
         volumeMounts:
         - name: config
-          path: /go/src/github.com/wordnet-world/Conductor/config/
+          mountPath: /go/src/github.com/wordnet-world/Conductor/config/
           readOnly: true
       volumes:
       - name: config
