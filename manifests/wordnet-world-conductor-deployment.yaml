@@ -13,14 +13,14 @@ spec:
         app: wordnet-world-conductor
     spec:
       containers:
-      - image: cjblink1/wordnet-world-conductor:8aacd67eaa536fd26da8e29d5ca57ec53eb76523
+      - image: cjblink1/wordnet-world-conductor:3b3efef347ec2d46b784bb9fa322e2b5923df9e9
         name: wordnet-world-conductor
         ports:
         - containerPort: 8675
         resources: {}
         volumeMounts:
-        - name: config
-          mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+          name: config
           readOnly: true
       volumes:
       - name: config
