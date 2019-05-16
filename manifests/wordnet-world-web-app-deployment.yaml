@@ -13,7 +13,7 @@ spec:
         app: wordnet-world-web-app
     spec:
       containers:
-      - image: cjblink1/wordnet-world-web-app:7898e400e0cff55e7a5a5f347b2fea393644fce2
+      - image: cjblink1/wordnet-world-web-app:4c8818c46e12f56897a79e99b1c0bbd89eb13fac
         name: wordnet-world-web-app
         ports:
         - containerPort: 80
