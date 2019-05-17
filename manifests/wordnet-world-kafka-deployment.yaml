@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordnet-world-kafka
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kafka
+    spec:
+      containers:
+        - name: kafka
+          image: 'spotify/kafka:latest'
+          ports:
+            - containerPort: 9092
+          env:
+          - name: ADVERTISED_HOST
+            value: "kafka"
+          - name: ADVERTISED_PORT
+            value: "9092"
