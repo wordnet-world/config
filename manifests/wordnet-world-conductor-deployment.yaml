@@ -22,6 +22,9 @@ spec:
         - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
           name: config
           readOnly: true
+        env:
+        - name: STAGE
+          value: "true"
       volumes:
       - name: config
         secret:
