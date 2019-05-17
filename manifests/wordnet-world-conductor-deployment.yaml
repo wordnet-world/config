@@ -20,9 +20,11 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+          subPath: conductor-conf.json
           name: config
           readOnly: true
         - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+          subPath: dummy_neo4j.cypher
           name: dummy-neo4j
           readOnly: true
         env:
