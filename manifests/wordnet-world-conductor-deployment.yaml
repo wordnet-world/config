@@ -13,7 +13,10 @@ spec:
         app: wordnet-world-conductor
     spec:
       containers:
-      - image: cjblink1/wordnet-world-conductor:f247c72517340de384d963b7b22ebc6a1c57d91c
+      - env:
+        - name: STAGE
+          value: "true"
+        image: cjblink1/wordnet-world-conductor:66a347eff6bd2ff184b405cacef0e2f4cf7b8b49
         name: wordnet-world-conductor
         ports:
         - containerPort: 8675
@@ -22,9 +25,6 @@ spec:
         - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
           name: config
           readOnly: true
-        env:
-        - name: STAGE
-          value: "true"
       volumes:
       - name: config
         secret:
