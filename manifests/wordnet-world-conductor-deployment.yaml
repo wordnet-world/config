@@ -19,11 +19,11 @@ spec:
         - containerPort: 8675
         resources: {}
         volumeMounts:
-        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/conductor-conf.json
           subPath: conductor-conf.json
           name: config
           readOnly: true
-        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/dummy_neo4j.cypher
           subPath: dummy_neo4j.cypher
           name: dummy-neo4j
           readOnly: true
