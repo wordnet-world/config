@@ -22,6 +22,9 @@ spec:
         - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
           name: config
           readOnly: true
+        - mountPath: /go/src/github.com/wordnet-world/Conductor/config/
+          name: dumby-neo4j
+          readOnly: true
         env:
         - name: STAGE
           value: "true"
@@ -29,4 +32,7 @@ spec:
       - name: config
         secret:
           secretName: conductor-conf
+      - name: dumby-neo4j
+        secret:
+          secretName: dumby-neo4j-cypher
 status: {}
