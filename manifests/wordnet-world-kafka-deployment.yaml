@@ -16,6 +16,6 @@ spec:
             - containerPort: 9092
           env:
           - name: ADVERTISED_HOST
-            value: "kafka"
+            value: "wordnet-world-kafka"
           - name: ADVERTISED_PORT
             value: "9092"
